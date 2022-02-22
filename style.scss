@@ -1,0 +1,27 @@
+$nav-color: rgba(20,20,20,1);
+$orange: #E28E39;
+$darkBlue: #072561;
+*{
+    border: 0px;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+#nav{
+    background-color: $nav-color;
+}
+#picture-section{
+    height: 15%;
+    align-items: center;
+    #quote-holder{
+        .quote{
+            text-align: center;
+            font-style: italic;
+            font-weight: 100;
+            font-size: 30px;
+        }
+    }
+    .right{
+        text-align: center;
+    }
+}
