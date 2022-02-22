@@ -6,8 +6,51 @@
           box-sizing: border-box;
 }
 
-#nav {
+.page {
+  height: 100vh;
+}
+
+#holder {
+  background: #020024;
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(32%, #05054e), to(#013039));
+  background: linear-gradient(90deg, #020024 0%, #05054e 32%, #013039 100%);
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0% auto;
+  padding: 0px 5%;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 5%;
+  margin-bottom: 0.5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #141414;
+}
+
+nav ul {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
 }
 
 #picture-section {
@@ -15,6 +58,27 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#picture-section #temp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+#picture-section #temp #me {
+  width: 20%;
+}
+
+#picture-section #temp #me img {
+  max-height: 100%;
 }
 
 #picture-section #quote-holder .quote {
@@ -26,5 +90,9 @@
 
 #picture-section .right {
   text-align: center;
+}
+
+h1, h2, p, tr, th {
+  color: #db8585;
 }
 /*# sourceMappingURL=style.css.map */
