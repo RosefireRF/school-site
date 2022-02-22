@@ -10,18 +10,7 @@
 }
 #picture-section .right{
     text-align: center;
-}
-#temp{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-items: flex-end;
-}
-#me{
-    width: 20%;
-}
-#me img{
-    max-height: 100%;
+    border: 1px solid white;
 }
 .quote{
     text-align: center;
@@ -30,8 +19,7 @@
     font-size: 30px;
 }
 nav{
-    background-color: rgba(20,20,20,1);
-    height: 5%;
+    height: 6%;
     margin-bottom: 0.5%;
     display: flex;
     align-items: center;
@@ -46,9 +34,12 @@ h2{
 p,a,tr,th{
     font-size: 18px;
 }
-
+tr,th{
+    text-align: center;
+}
 .page{
     height: 100vh;
+    width: 100%;
 }
 main{
     height: 94%;
@@ -72,13 +63,7 @@ h1,h2,p,tr,th{
 .flex{
     display: flex;
     flex-wrap: wrap;
-}
-h1,h2,p,tr,th{
-    color: white;
-}
-.flex{
-    display: flex;
-    flex-wrap: wrap;
+    align-items: center;
 }
 .space-b{
     justify-content: space-between;
@@ -90,8 +75,9 @@ h1,h2,p,tr,th{
     flex-direction: column;
 }
 #holder{
-    background-color: black;
-    width: 90%;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,78,1) 32%, rgba(1,48,57,1) 100%);
+    width: 100%;
     box-sizing: border-box;
     margin: 0% auto;
     padding: 0px 5%;
@@ -115,7 +101,18 @@ h1,h2,p,tr,th{
     flex-direction: column;
     justify-items: flex-end;
 }
-
+#temp{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+}
+#me{
+    width: 18%;
+}
+#me img{
+    max-height: 100%;
+}
 #about-section{
     width: 100%;
     height: 10%;
@@ -163,12 +160,26 @@ table{
     width: 100%;
     height: 5vh;
 }
+#description h1{
+    color:#2e54a0;
+}
+span{
+    color: #E28E39;
+}
 .education p{
     line-height: 5vh;
 }
 .skill h2,.skill p{
     text-align: center;
     color: white;
+}
+#projects{
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+}
+#projects p{
+    text-align: center;
 }
 @media only screen and (max-width: 1600px){
     h1{
@@ -179,6 +190,14 @@ table{
     }
     p,a,tr,th{
         font-size: 12px;
+    }
+    #me{
+        width: 25%;
+    }
+}
+@media only screen and (max-width: 1080px){
+    #me{
+        width: 30%;
     }
 }
 @media only screen and (max-width: 920px){
@@ -210,12 +229,48 @@ table{
     #skills-section{
         height: 35%;
     }
+    #skills-description{
+        height: 20%;
+    }
     #skills-holder{
         width: 100%;
         height: 80%;
     }
 }
 @media only screen and (max-width: 720px){
+    #holder{
+        background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,78,1) 50%, rgba(1,48,57,1) 100%);
+    }
+    #about-section{
+        margin: 5% 0%;
+    }
+    #about-section .left, #about-section.right{
+        margin: 2% 0%;
+        text-align: center;
+    }
+    #education-section{
+        height: 30vh;
+    }
+    #education-description{
+        height: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #education-holder{
+        height: 80%;
+    }
+    #skill-description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #temp{
+        width: 50%;
+    }
     #quote-holder{
         display: none;
     }
@@ -234,17 +289,11 @@ table{
     }
     #skills-holder{
         height: 80%;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .skill{
         width: 100%;
         height: 23%;
-    }
-    #education-section{
-        height: 25vh;
-    }
-    #education-holder{
-        height: 20vh;
     }
     #education-section div{
         width: 100%;
