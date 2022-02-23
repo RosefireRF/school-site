@@ -7,7 +7,6 @@ $darkBlue: #072561;
     display: flex;
     flex-wrap: wrap;
 }
-
 @mixin flex-column{
     @include flex;
     flex-direction: column;
@@ -51,7 +50,7 @@ main{
                 width: 20%;
                 img{
                     max-height: 100%;
-                    width: 100%;
+                    height: 15vh;
                     border-radius: 20px;
                 }
             }
@@ -72,10 +71,63 @@ main{
         @include flex-column;
         width: 100%;
         height: 10%;
-        #left{
-            width: 39%;
+        .left{
             @include flex-column;
             justify-items: flex-end;
+        }
+        .right{
+            table{
+                td,th{
+                    text-align: center;
+                }
+                width: 100%;
+                border-radius: 10px;
+                border: 1px solid white;
+                margin-bottom: auto;
+            }
+        }
+
+    }
+    #skills-section{
+        @include flex-between;
+        height: 40%;
+        .left{
+            width: 30%;
+        }
+        .right{
+            @include flex-between;
+            .skill{
+                @include flex-around;
+                flex-direction: column;
+                text-align: center;
+                border-radius: 20px;
+                padding: 5px;
+                width: 45%;
+                height: 45%;
+                background-color: $darkBlue;
+            }
+        }
+    }
+    #education-section{
+        @include flex-between;
+        height: 25%;
+        .left{
+        }
+        .right{
+            @include flex-between;
+            flex-direction: column;
+            height: 100%;
+            .education{
+                border-radius: 5px;
+                text-align: center;
+                background-color: $orange;
+                width: 100%;
+                height: 5vh;
+                p{
+                    line-height: 5vh;
+                    color: white;
+                }
+            }
         }
     }
 }
@@ -85,22 +137,23 @@ main{
     width: 100%;
     box-sizing: border-box;
     margin: 0% auto;
-    padding: 0px 5%;
-}
-nav{
-    @include flex-around;
-    height: 5%;
-    margin-bottom: 0.5%;
-    align-items: center;
-    ul{
-        width: 50%;
+    padding: 0px 5% 0px 5%;
+    nav{
         @include flex-around;
-        li a{
-            color: white;
-            text-decoration: none;
+        height: 5%;
+        margin-bottom: 0.5%;
+        align-items: center;
+        ul{
+            width: 50%;
+            @include flex-around;
+            li a{
+                color: white;
+                text-decoration: none;
+            }
         }
     }
 }
+
 h1,h2,p,tr,th{
-    color: rgb(219, 133, 133);
+    color: white;
 }
