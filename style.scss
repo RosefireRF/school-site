@@ -68,7 +68,7 @@ main{
         }
     }
     #about-section{
-        @include flex-column;
+        @include flex-between();
         width: 100%;
         height: 10%;
         .left{
@@ -111,8 +111,6 @@ main{
     #education-section{
         @include flex-between;
         height: 25%;
-        .left{
-        }
         .right{
             @include flex-between;
             flex-direction: column;
@@ -156,4 +154,134 @@ main{
 
 h1,h2,p,tr,th{
     color: white;
+}
+@media only screen and (max-width: 1600px){
+    h1{
+        font-size: 26px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    p,a,tr,th{
+        font-size: 12px;
+    }
+    #me{
+        width: 25%;
+    }
+}
+@media only screen and (max-width: 1080px){
+    #me{
+        width: 30%;
+    }
+}
+@media only screen and (max-width: 920px){
+    #holder{
+        width: 100%;
+        #about-section, #picture-section{
+            height: 17.5%;
+        }
+        #education-section, #skills-section{
+            .left{
+                @include flex-column;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+            .right{
+                @include flex-between;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                height: 80%;
+                .education{
+                    justify-self: center;
+                }
+            }
+        }
+    }
+
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    p,a,tr,th{
+        font-size: 15px;
+    }
+    #about-section{
+        height: 20%;
+    }
+    #about-section .right, #about-section #description, #skills-holder,#skill-description{
+        width: 100%;
+    }
+    #me{
+        width: 50%;
+    }
+    #skills-section{
+        height: 35%;
+    }
+    #skills-description{
+        height: 20%;
+    }
+    #skills-holder{
+        width: 100%;
+        height: 80%;
+    }
+}
+@media only screen and (max-width: 720px){
+    .page{
+        height: auto;
+    }
+    #holder{
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,78,1) 50%, rgba(1,48,57,1) 100%);
+    }
+    #about-section{
+        margin: 5% 0%;
+        .left{
+            margin: 2% 0%;
+            text-align: center;
+        }
+        .right{
+            margin: 2% 0%;
+            text-align: center;
+        }
+    }
+    #education-section{
+        height: 30vh;
+        div{
+            width: 100%;
+        }
+        .left{
+            height: 45%;
+            @include flex-column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    #skills-section{
+        margin-top: 0%;
+        height: 80vh;
+        .left{
+            height: 20%;
+        }
+        .right{
+            height: 80%;
+            justify-content: space-between;
+            .skill{
+                width: 100%;
+                height: 23%;
+            }
+        }
+    }
+    #picture-section{
+        height: 10vh;
+        .left{
+            width: 50%;
+        }
+        .right{
+            display: none;
+        }
+    }
 }

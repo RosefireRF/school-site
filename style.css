@@ -90,10 +90,9 @@ main #about-section {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   height: 10%;
 }
@@ -254,5 +253,176 @@ main #education-section .right .education p {
 
 h1, h2, p, tr, th {
   color: white;
+}
+
+@media only screen and (max-width: 1600px) {
+  h1 {
+    font-size: 26px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p, a, tr, th {
+    font-size: 12px;
+  }
+  #me {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  #me {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  #holder {
+    width: 100%;
+  }
+  #holder #about-section, #holder #picture-section {
+    height: 17.5%;
+  }
+  #holder #education-section .left, #holder #skills-section .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #holder #education-section .right, #holder #skills-section .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 80%;
+  }
+  #holder #education-section .right .education, #holder #skills-section .right .education {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  p, a, tr, th {
+    font-size: 15px;
+  }
+  #about-section {
+    height: 20%;
+  }
+  #about-section .right, #about-section #description, #skills-holder, #skill-description {
+    width: 100%;
+  }
+  #me {
+    width: 50%;
+  }
+  #skills-section {
+    height: 35%;
+  }
+  #skills-description {
+    height: 20%;
+  }
+  #skills-holder {
+    width: 100%;
+    height: 80%;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .page {
+    height: auto;
+  }
+  #holder {
+    background: #020024;
+    background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(50%, #05054e), to(#013039));
+    background: linear-gradient(90deg, #020024 0%, #05054e 50%, #013039 100%);
+  }
+  #about-section {
+    margin: 5% 0%;
+  }
+  #about-section .left {
+    margin: 2% 0%;
+    text-align: center;
+  }
+  #about-section .right {
+    margin: 2% 0%;
+    text-align: center;
+  }
+  #education-section {
+    height: 30vh;
+  }
+  #education-section div {
+    width: 100%;
+  }
+  #education-section .left {
+    height: 45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #skills-section {
+    margin-top: 0%;
+    height: 80vh;
+  }
+  #skills-section .left {
+    height: 20%;
+  }
+  #skills-section .right {
+    height: 80%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #skills-section .right .skill {
+    width: 100%;
+    height: 23%;
+  }
+  #picture-section {
+    height: 10vh;
+  }
+  #picture-section .left {
+    width: 50%;
+  }
+  #picture-section .right {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
