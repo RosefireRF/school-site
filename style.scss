@@ -1,6 +1,6 @@
 $nav-color: rgba(20,20,20,1);
-$orange: #E28E39;
-$darkBlue: #072561;
+$orange: white;
+$darkBlue: white;
 
 
 @mixin flex{
@@ -61,6 +61,9 @@ main{
                 font-style: italic;
                 font-weight: 100;
                 font-size: 30px;
+                p{
+                    color: #136F63;
+                }
             }
         }
         .right{
@@ -74,6 +77,11 @@ main{
         .left{
             @include flex-column;
             justify-items: flex-end;
+            h1{
+                span{
+                    color: #064663;
+                }
+            }
         }
         .right{
             table{
@@ -104,7 +112,13 @@ main{
                 padding: 5px;
                 width: 45%;
                 height: 45%;
-                background-color: $darkBlue;
+                background-color: #04293A;
+                p{
+                color: #ECB365;
+                }
+                h2{
+                    color: white;
+                }
             }
         }
     }
@@ -118,20 +132,19 @@ main{
             .education{
                 border-radius: 5px;
                 text-align: center;
-                background-color: $orange;
+                background-color: #04293A;
                 width: 100%;
                 height: 5vh;
                 p{
                     line-height: 5vh;
-                    color: white;
+                    color: #F5F2E7;
                 }
             }
         }
     }
 }
 #holder{
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,78,1) 32%, rgba(1,48,57,1) 100%);
+    background-color: #041C32;
     width: 100%;
     box-sizing: border-box;
     margin: 0% auto;
@@ -143,6 +156,7 @@ main{
         align-items: center;
         ul{
             width: 50%;
+            list-style-type: none;
             @include flex-around;
             li a{
                 color: white;
@@ -234,54 +248,54 @@ h1,h2,p,tr,th{
         height: auto;
     }
     #holder{
-        background: rgb(2,0,36);
-        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,78,1) 50%, rgba(1,48,57,1) 100%);
-    }
-    #about-section{
-        margin: 5% 0%;
-        .left{
-            margin: 2% 0%;
-            text-align: center;
-        }
-        .right{
-            margin: 2% 0%;
-            text-align: center;
-        }
-    }
-    #education-section{
-        height: 30vh;
-        div{
-            width: 100%;
-        }
-        .left{
-            height: 45%;
-            @include flex-column;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-    #skills-section{
-        margin-top: 0%;
-        height: 80vh;
-        .left{
+        background-color: #041C32;
+        padding: 0 2%;
+        #picture-section{
             height: 20%;
-        }
-        .right{
-            height: 80%;
-            justify-content: space-between;
-            .skill{
-                width: 100%;
-                height: 23%;
+            .left{
+                width: 50%;
+            }
+            .right{
+                display: none;
             }
         }
-    }
-    #picture-section{
-        height: 10vh;
-        .left{
-            width: 50%;
+        #about-section{
+            margin: 3% 0%;
+            .left{
+                margin: 2% 0%;
+                text-align: center;
+            }
+            .right{
+                margin: 2% 0%;
+                text-align: center;
+            }
         }
-        .right{
-            display: none;
+        #education-section{
+            height: 30vh;
+            div{
+                width: 100%;
+            }
+            .left{
+                height: 20%;
+                @include flex-column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        #skills-section{
+            margin-top: 0%;
+            height: 80vh;
+            .left{
+                height: 6%;
+            }
+            .right{
+                height: 94%;
+                justify-content: space-between;
+                .skill{
+                    width: 100%;
+                    height: 20%;
+                }
+            }
         }
     }
 }

@@ -80,6 +80,10 @@ main #picture-section #quote-holder .quote {
   font-size: 30px;
 }
 
+main #picture-section #quote-holder .quote p {
+  color: #136F63;
+}
+
 main #picture-section .right {
   text-align: center;
 }
@@ -108,6 +112,10 @@ main #about-section .left {
       -ms-flex-direction: column;
           flex-direction: column;
   justify-items: flex-end;
+}
+
+main #about-section .left h1 span {
+  color: #064663;
 }
 
 main #about-section .right table {
@@ -165,7 +173,15 @@ main #skills-section .right .skill {
   padding: 5px;
   width: 45%;
   height: 45%;
-  background-color: #072561;
+  background-color: #04293A;
+}
+
+main #skills-section .right .skill p {
+  color: #ECB365;
+}
+
+main #skills-section .right .skill h2 {
+  color: white;
 }
 
 main #education-section {
@@ -199,20 +215,18 @@ main #education-section .right {
 main #education-section .right .education {
   border-radius: 5px;
   text-align: center;
-  background-color: #E28E39;
+  background-color: #04293A;
   width: 100%;
   height: 5vh;
 }
 
 main #education-section .right .education p {
   line-height: 5vh;
-  color: white;
+  color: #F5F2E7;
 }
 
 #holder {
-  background: #020024;
-  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(32%, #05054e), to(#013039));
-  background: linear-gradient(90deg, #020024 0%, #05054e 32%, #013039 100%);
+  background-color: #041C32;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -237,6 +251,7 @@ main #education-section .right .education p {
 
 #holder nav ul {
   width: 50%;
+  list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,29 +374,37 @@ h1, h2, p, tr, th {
     height: auto;
   }
   #holder {
-    background: #020024;
-    background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(50%, #05054e), to(#013039));
-    background: linear-gradient(90deg, #020024 0%, #05054e 50%, #013039 100%);
+    background-color: #041C32;
+    padding: 0 2%;
   }
-  #about-section {
-    margin: 5% 0%;
+  #holder #picture-section {
+    height: 20%;
   }
-  #about-section .left {
+  #holder #picture-section .left {
+    width: 50%;
+  }
+  #holder #picture-section .right {
+    display: none;
+  }
+  #holder #about-section {
+    margin: 3% 0%;
+  }
+  #holder #about-section .left {
     margin: 2% 0%;
     text-align: center;
   }
-  #about-section .right {
+  #holder #about-section .right {
     margin: 2% 0%;
     text-align: center;
   }
-  #education-section {
+  #holder #education-section {
     height: 30vh;
   }
-  #education-section div {
+  #holder #education-section div {
     width: 100%;
   }
-  #education-section .left {
-    height: 45%;
+  #holder #education-section .left {
+    height: 20%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -398,31 +421,22 @@ h1, h2, p, tr, th {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #skills-section {
+  #holder #skills-section {
     margin-top: 0%;
     height: 80vh;
   }
-  #skills-section .left {
-    height: 20%;
+  #holder #skills-section .left {
+    height: 6%;
   }
-  #skills-section .right {
-    height: 80%;
+  #holder #skills-section .right {
+    height: 94%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  #skills-section .right .skill {
+  #holder #skills-section .right .skill {
     width: 100%;
-    height: 23%;
-  }
-  #picture-section {
-    height: 10vh;
-  }
-  #picture-section .left {
-    width: 50%;
-  }
-  #picture-section .right {
-    display: none;
+    height: 20%;
   }
 }
 /*# sourceMappingURL=style.css.map */
