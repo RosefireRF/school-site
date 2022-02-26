@@ -7,6 +7,11 @@ $darkBlue: white;
     display: flex;
     flex-wrap: wrap;
 }
+@mixin flex-center{
+    @include flex;
+    justify-content: center;
+    align-content: center;
+}
 @mixin flex-column{
     @include flex;
     flex-direction: column;
@@ -35,7 +40,7 @@ $darkBlue: white;
     width: 100%;
     height: 100vh;
 }
-main{
+#landing-page{
     height: 94%;
     @include flex-between;
     flex-direction: column;
@@ -143,26 +148,110 @@ main{
         }
     }
 }
+#projects{
+    #projects-description{
+        text-align: center;
+        height: 6%;
+        margin-bottom: 2%;
+    }
+    #projects-holder{
+        @include flex-between;
+        height: 90%;
+        .project{
+            @include flex-center();
+            position: relative;
+            width: 40%;
+            height: 30%;
+            background-color: #04293A;
+            border-radius: 5%;
+            .cover{
+                position: absolute;
+                border-radius: 5%;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #04293A;
+            }
+            .cover:hover{
+                animation-name: fade-out;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+            .project-information{
+                position: absolute;
+                @include flex-column;
+                justify-content: space-between;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                padding: 5px;
+                .project-title{
+                    @include flex-center;
+                    color: white;
+                    height: 20%;
+                }
+                .project-description{
+                    @include flex-center;
+                    height: 60%;
+                }
+                .project-links{
+                    @include flex-center;
+                    z-index: 2;
+                    height: 10%;
+                    margin: 0 auto;
+                    width: 30%;
+                    a{
+                        margin: 0% 10%;
+                        text-decoration: none;
+                        color: #136F63;
+                    }
+                    .site{
+                        color: #92A9BD;
+                    }
+                }
+                .project-skills{
+                    @include flex-center;
+                    color: #ECB365;
+                    height: 10%;
+                }
+            }
+        }
+    }
+}
+@keyframes fade-out{
+    from {opacity: 100%}
+    to {opacity: 0%};
+}
+nav{
+    z-index: 3;
+    @include flex-around;
+    position: fixed;
+    height: 5vh;
+    width: 100%;
+    margin-bottom: 0.5%;
+    background-color: rgba(20,20,20,0.2);
+    align-items: center;
+    ul{
+        width: 50%;
+        list-style-type: none;
+        @include flex-around;
+        li a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
 #holder{
     background-color: #041C32;
     width: 100%;
     box-sizing: border-box;
     margin: 0% auto;
     padding: 0px 5% 0px 5%;
-    nav{
-        @include flex-around;
-        height: 5%;
-        margin-bottom: 0.5%;
-        align-items: center;
-        ul{
-            width: 50%;
-            list-style-type: none;
-            @include flex-around;
-            li a{
-                color: white;
-                text-decoration: none;
-            }
-        }
+    .page{
+        padding-top: 5vh;
     }
 }
 
@@ -254,6 +343,7 @@ h1,h2,p,tr,th{
             height: 20%;
             .left{
                 width: 50%;
+                margin: 0 auto;
             }
             .right{
                 display: none;
@@ -287,13 +377,36 @@ h1,h2,p,tr,th{
             height: 80vh;
             .left{
                 height: 6%;
+                margin-bottom: 2%;
             }
             .right{
-                height: 94%;
+                height: 92%;
                 justify-content: space-between;
                 .skill{
                     width: 100%;
                     height: 20%;
+                }
+            }
+        }
+        #projects{
+            #projects-description{
+                height: 5vh;
+            }
+            #projects-holder{
+                height: 80vh;
+                .project{
+                    width: 100%;
+                    height: 23%;
+                    .project-description{
+                        height: 50%;
+                    }
+                    .project-links{
+                        width: 100%;
+                        height: 8%;
+                    }
+                    .project-skills{
+                        height: 20%;
+                    }
                 }
             }
         }
