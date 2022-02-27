@@ -1,7 +1,11 @@
 $nav-color: rgba(20,20,20,1);
-$orange: white;
-$darkBlue: white;
-
+$offWhite: #F5F2E7;
+$orange: #ECB365;
+$backgroundBlue: #041C32;
+$itemBlue: #04293A;
+$lightBlue: #92A9BD;
+$darkBlue: #064663;
+$darkGreen: #136F63;
 
 @mixin flex{
     display: flex;
@@ -9,6 +13,7 @@ $darkBlue: white;
 }
 @mixin flex-center{
     @include flex;
+    color:$offWhite;
     justify-content: center;
     align-content: center;
 }
@@ -67,7 +72,7 @@ $darkBlue: white;
                 font-weight: 100;
                 font-size: 30px;
                 p{
-                    color: #136F63;
+                    color: $darkGreen;
                 }
             }
         }
@@ -84,12 +89,13 @@ $darkBlue: white;
             justify-items: flex-end;
             h1{
                 span{
-                    color: #064663;
+                    color: $darkBlue;
                 }
             }
         }
         .right{
             table{
+                background-color: $lightBlue;
                 td,th{
                     text-align: center;
                 }
@@ -117,9 +123,9 @@ $darkBlue: white;
                 padding: 5px;
                 width: 45%;
                 height: 45%;
-                background-color: #04293A;
+                background-color: $itemBlue;
                 p{
-                color: #ECB365;
+                color: $orange;
                 }
                 h2{
                     color: white;
@@ -137,12 +143,12 @@ $darkBlue: white;
             .education{
                 border-radius: 5px;
                 text-align: center;
-                background-color: #04293A;
+                background-color: $itemBlue;
                 width: 100%;
                 height: 5vh;
                 p{
                     line-height: 5vh;
-                    color: #F5F2E7;
+                    color: $offWhite;
                 }
             }
         }
@@ -162,7 +168,7 @@ $darkBlue: white;
             position: relative;
             width: 40%;
             height: 30%;
-            background-color: #04293A;
+            background-color: $itemBlue;
             border-radius: 5%;
             .cover{
                 position: absolute;
@@ -173,7 +179,7 @@ $darkBlue: white;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #04293A;
+                background-color: $itemBlue;
             }
             .cover:hover{
                 animation-name: fade-out;
@@ -206,15 +212,15 @@ $darkBlue: white;
                     a{
                         margin: 0% 10%;
                         text-decoration: none;
-                        color: #136F63;
+                        color: $darkGreen;
                     }
                     .site{
-                        color: #92A9BD;
+                        color: $lightBlue;
                     }
                 }
                 .project-skills{
                     @include flex-center;
-                    color: #ECB365;
+                    color: $orange;
                     height: 10%;
                 }
             }
@@ -230,7 +236,7 @@ nav{
     @include flex-around;
     position: fixed;
     height: 5vh;
-    width: 100%;
+    width: 99vw;
     margin-bottom: 0.5%;
     background-color: rgba(20,20,20,0.2);
     align-items: center;
@@ -245,7 +251,7 @@ nav{
     }
 }
 #holder{
-    background-color: #041C32;
+    background-color: $backgroundBlue;
     width: 100%;
     box-sizing: border-box;
     margin: 0% auto;
@@ -276,10 +282,30 @@ h1,h2,p,tr,th{
     #me{
         width: 30%;
     }
+    #projects{
+        #projects-holder{
+            .project{
+                height: 35%;
+                .project-information{
+                    .project-description{
+                        height: 50%;
+                    }
+
+                    .project-links{
+                        width: 100%;
+                        height: 10%;
+                    }
+                    .project-skills{
+                        height: 20%;
+                    }
+                }
+            }
+        }
+    }
 }
 @media only screen and (max-width: 920px){
     #holder{
-        width: 100%;
+        width: 100vw;
         #about-section, #picture-section{
             height: 17.5%;
         }
@@ -302,7 +328,7 @@ h1,h2,p,tr,th{
             }
         }
     }
-
+    #project-skills
     h1{
         font-size: 30px;
     }
@@ -337,8 +363,8 @@ h1,h2,p,tr,th{
         height: auto;
     }
     #holder{
-        background-color: #041C32;
-        padding: 0 2%;
+        background-color: $backgroundBlue;
+        padding: 0 0%;
         #picture-section{
             height: 20%;
             .left{
@@ -360,21 +386,9 @@ h1,h2,p,tr,th{
                 text-align: center;
             }
         }
-        #education-section{
-            height: 30vh;
-            div{
-                width: 100%;
-            }
-            .left{
-                height: 20%;
-                @include flex-column;
-                align-items: center;
-                justify-content: center;
-            }
-        }
         #skills-section{
             margin-top: 0%;
-            height: 80vh;
+            height: 100vh;
             .left{
                 height: 6%;
                 margin-bottom: 2%;
@@ -388,12 +402,24 @@ h1,h2,p,tr,th{
                 }
             }
         }
+        #education-section{
+            height: 30vh;
+            div{
+                width: 100%;
+            }
+            .left{
+                height: 30%;
+                @include flex-column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
         #projects{
             #projects-description{
-                height: 5vh;
+                height: 6vh;
             }
             #projects-holder{
-                height: 80vh;
+                height: 90vh;
                 .project{
                     width: 100%;
                     height: 23%;
