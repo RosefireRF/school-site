@@ -3,6 +3,7 @@ $offWhite: #F5F2E7;
 $orange: #ECB365;
 $backgroundBlue: #041C32;
 $itemBlue: #04293A;
+$itemBlueOpaque: #04293a59;
 $lightBlue: #92A9BD;
 $darkBlue: #064663;
 $darkGreen: #136F63;
@@ -29,14 +30,19 @@ $darkGreen: #136F63;
     @include flex;
     justify-content: space-around;
 }
+@mixin section-flex{
+    margin: 0% auto;
+    width: 95%;
+}
 *{
     border: 0px;
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    
 }
 .left{
-    width: 40%;
+    width: 30%;
 }
 .right{
     width: 60%;
@@ -54,15 +60,12 @@ $darkGreen: #136F63;
         align-items: center;
         @include flex-between;
         #temp{
-            @include flex-column;
+            @include flex-center;
             height: 100%;
-            #me{
-                width: 20%;
-                img{
-                    max-height: 100%;
-                    height: 15vh;
-                    border-radius: 20px;
-                }
+            img{
+                height: 90%;
+                width: auto;
+                border-radius: 25%;
             }
         }
         #quote-holder{
@@ -87,6 +90,7 @@ $darkGreen: #136F63;
         .left{
             @include flex-column;
             justify-items: flex-end;
+            text-align: center;
             h1{
                 span{
                     color: $darkBlue;
@@ -95,7 +99,7 @@ $darkGreen: #136F63;
         }
         .right{
             table{
-                background-color: $lightBlue;
+                background-color: $darkBlue;
                 td,th{
                     text-align: center;
                 }
@@ -111,7 +115,7 @@ $darkGreen: #136F63;
         @include flex-between;
         height: 40%;
         .left{
-            width: 30%;
+            text-align: center;
         }
         .right{
             @include flex-between;
@@ -136,6 +140,9 @@ $darkGreen: #136F63;
     #education-section{
         @include flex-between;
         height: 25%;
+        .left{
+            text-align: center;
+        }
         .right{
             @include flex-between;
             flex-direction: column;
@@ -153,6 +160,10 @@ $darkGreen: #136F63;
             }
         }
     }
+}
+@keyframes fade-out{
+    from {opacity: 100%}
+    to {opacity: 0%};
 }
 #projects{
     #projects-description{
@@ -227,9 +238,127 @@ $darkGreen: #136F63;
         }
     }
 }
-@keyframes fade-out{
-    from {opacity: 100%}
-    to {opacity: 0%};
+#contact-us{
+    position: relative;
+    h1{
+        text-align: center;
+    }
+    #contact-holder{
+        width: 80%;
+        height: 60%;
+        margin: 5% auto 0% auto;
+        @include flex-between;
+        #contacts{
+            @include flex-between;
+            flex-direction: column;
+            width: 40%;
+            height: 100%;
+            .contact{
+                @include flex-column;
+                border: 0.5px solid $darkGreen;
+                border-radius: 2%;
+                justify-content: space-between;
+                text-align: center;
+                height: 32%;
+                color: $offWhite;
+                padding: 5%;
+                background-color: $itemBlue;
+                .title{
+                    height: 20%;
+                    i{
+                        color: $orange;
+                    }
+                }
+                .info{
+                    @include flex-column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 60%;
+                }
+            }
+        }
+        #contact-form{
+            padding-top: 1%;
+            border-radius: 2%;
+            text-align: center;
+            width: 55%;
+            background-color: $itemBlue;
+            height: 100%;
+            h3{
+                margin-bottom: 2%;
+                color: $lightBlue;
+            }
+            form{
+                @include flex-column;
+                justify-content: space-between;
+                height: 90%;
+                .input-holder{
+                    @include flex-column;
+                    justify-content: space-between;
+                    margin: 0% auto;
+                    width: 90%;
+                    height: 15%;
+                    label{
+                        height: 10%;
+                        width: 100%;
+                        color: $orange;
+                    }
+                    .input{
+                        border-radius: 4%;
+                        width: 100%;
+                        height: 70%;
+                        text-align: center;
+                        color: $orange;
+                        background-color: $darkBlue;
+                    }
+                }
+                .textarea-holder{
+                    width: 90%;
+                    height: 30%;
+                    margin: 0% auto;
+                    @include flex-column;
+                    justify-content: space-between;
+                    label{
+                        height: 10%;
+                        color: $orange;
+                    }
+                    textarea{
+                        height: 85%;
+                        color: $darkGreen;
+                        background-color: $darkBlue;
+                        resize: none;
+                    }
+                }
+                button{
+                    margin: 0% auto;
+                    width: 90%;
+                    height: 10%;
+                    background-color: $darkGreen;
+                    color: $offWhite;
+                }
+            }
+        }
+    }
+}
+footer{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 5vh;
+    line-height: 5vh;
+    background-color: $itemBlueOpaque;
+    color: white;
+    #copyright{
+        position: absolute;
+        left: 0%;
+    }
+    #links{
+        height: 100%;
+        margin: 0% auto;
+        width: 20%;
+        @include flex-between;
+        align-items: center;
+    }
 }
 nav{
     z-index: 3;
@@ -328,7 +457,11 @@ h1,h2,p,tr,th{
             }
         }
     }
-    #project-skills
+    #contact-us{
+        #contact-holder{
+            width: 100%;
+        }
+    }
     h1{
         font-size: 30px;
     }
@@ -366,7 +499,7 @@ h1,h2,p,tr,th{
         background-color: $backgroundBlue;
         padding: 0 0%;
         #picture-section{
-            height: 20%;
+            height: 20vh;
             .left{
                 width: 50%;
                 margin: 0 auto;
@@ -382,7 +515,7 @@ h1,h2,p,tr,th{
                 text-align: center;
             }
             .right{
-                margin: 2% 0%;
+                @include section-flex;
                 text-align: center;
             }
         }
@@ -396,6 +529,7 @@ h1,h2,p,tr,th{
             .right{
                 height: 92%;
                 justify-content: space-between;
+                @include section-flex;
                 .skill{
                     width: 100%;
                     height: 20%;
@@ -413,13 +547,17 @@ h1,h2,p,tr,th{
                 align-items: center;
                 justify-content: center;
             }
+            .right{
+                @include section-flex;
+            }
         }
         #projects{
             #projects-description{
                 height: 6vh;
             }
             #projects-holder{
-                height: 90vh;
+                height: 94vh;
+                @include section-flex;
                 .project{
                     width: 100%;
                     height: 23%;
@@ -434,6 +572,34 @@ h1,h2,p,tr,th{
                         height: 20%;
                     }
                 }
+            }
+        }
+    }
+    #contact-us{
+        height: auto;
+        #contact-holder{
+            @include flex-column;
+            width: 100%;
+            height: auto;
+            #contacts{
+                margin: 0% auto;
+                width: 95%;
+                height: 50vh;
+            }
+            #contact-form{
+                margin: 0% auto;
+                margin-top: 5%;
+                width: 95%;
+                height: 50vh;
+                margin-bottom: 7vh;
+            }
+        }
+        footer{
+            #copyright{
+                font-size: 12px;
+            }
+            #links{
+                width: 40%;
             }
         }
     }

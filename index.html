@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style2.css">
+    <script src="https://kit.fontawesome.com/a193a5759e.js" crossorigin="anonymous"></script>
     <title>Ilija Krstić</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
         </ul>
         <ul>
             <li><a href="#projects">Projekti</a></li>
-            <li><a href="#pocetak">Kontakt</a></li>
+            <li><a href="#contact-us">Kontakt</a></li>
         </ul>
     </nav>
     <div id="holder">
@@ -23,9 +24,7 @@
     <div class="flex space-b" id="landing-page">
         <div class="flex space-b" id="picture-section">
             <div id="temp" class="left">
-                <div id="me">
                     <img src="slike/IMG_20210728_152345.jpg" class="author-image" alt="">
-                </div>
             </div>
             <div id="quote-holder" class="right">
                 <p class="quote">"Izgleda nemoguće, dokle god se ne završi."</p>
@@ -132,7 +131,7 @@
                 <div class="project-information">
                     <h2 class="project-title">Kamen papir makaze</h2>
                     <hr>
-                    <p class="project-description">Napredna vrsta igre kamen papir makaze u kojoj odaberete svoju glavnu klasu i neprijatelj odabere jednu, sa njom radite duplo štete, svaka pobeda košta neprijatelja deset zdravlja, dvadeset ako pobedite koristeći oružje svoje glavne klase</p>
+                    <p class="project-description">Napredna vrsta igre kamen papir makaze u kojoj odaberete svoju glavnu klasu i neprijatelj odabere jednu, sa njom radite duplo štete, svaka pobeda košta neprijatelja deset zdravlja</p>
                     <div class="project-links">
                         <a href="https://github.com/RosefireRF/Advanced-Rock-Paper-Scissors">GITHUB</a> 
                         <a class="site" href="https://rosefirerf.github.io/Advanced-Rock-Paper-Scissors/">SITE</a> 
@@ -172,7 +171,73 @@
             </div>
         </div>
     </div>
-    <div class="page">tekst</div>
+    <div id="contact-us" class="page">
+        <h1>Želite da ostanemo u kontaktu?</h1>
+        <div id="contact-holder">
+            <div id="contacts">
+                <div class="contact">
+                    <div class="title">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h3>Email</h3>
+                    </div>
+                    <div class="info">
+                        <p>ilijakrstic2002@gmail.com</p>
+                        <p>amzngprogamer@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="title">
+                        <i class="fa-solid fa-location-arrow"></i>
+                        <h3>Adresa</h3>
+                    </div>
+                    <div class="info">
+                        <p>Kursulina 1, Beograd</p>
+                        <p>Novosadska 3, Niš</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="title">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>Telefon</h3>
+                    </div>
+                    <div class="info">
+                        <p>064 5124365</p>
+                    </div>
+                </div>
+            </div>
+            <div id="contact-form">
+                <h3>Pošaljite nam poruku!</h3>
+                <form id="kontakt-forma" action="1.php" method="POST">
+                    <div class="input-holder">
+                        <label for="ime">Ime i prezime</label>
+                        <input id="ime" name="ime" type="text" placeholder="Marko Marković" class="input">
+                    </div>
+                    <div class="input-holder">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="markomarkovic2@gmail.com" class="input">
+                    </div>
+                    <div class="input-holder">
+                        <label for="tema">Tema</label>
+                        <input id="tema" name="tema" type="text" placeholder="Marko Marković" class="input">
+                    </div>
+                    <div class="textarea-holder">
+                        <label for="content">Sadržaj poruke</label>
+                        <textarea name="content" id="content" form="kontakt-forma" cols="30" rows="10"></textarea>
+                    </div>
+                    <button type="submit">Pošalji!</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div id="copyright">Copyright &copy;2022</div>
+            <div id="links">
+                <a href="https://github.com/RosefireRF/school-site/blob/scss/style.scss"><i class="fa-brands fa-sass"></i></a>
+                <a href="https://github.com/RosefireRF/school-site/blob/scss/style.css"><i class="fa-brands fa-css3-alt"></i></a>
+                 <i class="fa-solid fa-sitemap"></i>
+                 <a href="file:///I:/Xampp/htdocs/rad/school-site/robots.txt"><i class="fa-solid fa-robot"></i></a>
+            </div>
+        </footer>
+    </div>
     </div>
 </body>
 </html>
