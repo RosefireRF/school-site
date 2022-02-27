@@ -153,9 +153,12 @@ $darkGreen: #136F63;
                 background-color: $itemBlue;
                 width: 100%;
                 height: 5vh;
-                p{
+                a{
+                    text-decoration: none !important;
+                    p{
                     line-height: 5vh;
                     color: $offWhite;
+                    }
                 }
             }
         }

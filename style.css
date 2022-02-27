@@ -224,7 +224,11 @@
   height: 5vh;
 }
 
-#landing-page #education-section .right .education p {
+#landing-page #education-section .right .education a {
+  text-decoration: none !important;
+}
+
+#landing-page #education-section .right .education a p {
   line-height: 5vh;
   color: #F5F2E7;
 }
