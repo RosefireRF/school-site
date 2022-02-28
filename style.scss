@@ -7,6 +7,7 @@ $itemBlueOpaque: #04293a59;
 $lightBlue: #92A9BD;
 $darkBlue: #064663;
 $darkGreen: #136F63;
+$tempColor: rgb(4,28,50);
 
 @mixin flex{
     display: flex;
@@ -39,7 +40,6 @@ $darkGreen: #136F63;
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    
 }
 .left{
     width: 30%;
@@ -437,7 +437,7 @@ h1,h2,p,tr,th{
 }
 @media only screen and (max-width: 920px){
     #holder{
-        width: 100vw;
+        width: 100vw - 10px;
         #about-section, #picture-section{
             height: 17.5%;
         }
