@@ -170,6 +170,7 @@
           flex-direction: column;
   text-align: center;
   border-radius: 20px;
+  border: 1px solid black;
   padding: 5px;
   width: 45%;
   height: 45%;
@@ -218,6 +219,7 @@
 
 #landing-page #education-section .right .education {
   border-radius: 5px;
+  border: 1px solid black;
   text-align: center;
   background-color: #04293A;
   width: 100%;
@@ -286,6 +288,7 @@
   height: 30%;
   background-color: #04293A;
   border-radius: 5%;
+  border: 1px solid black;
 }
 
 #projects #projects-holder .project .cover {

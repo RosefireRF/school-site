@@ -124,6 +124,7 @@ $tempColor: rgb(4,28,50);
                 flex-direction: column;
                 text-align: center;
                 border-radius: 20px;
+                border: 1px solid black;
                 padding: 5px;
                 width: 45%;
                 height: 45%;
@@ -149,6 +150,7 @@ $tempColor: rgb(4,28,50);
             height: 100%;
             .education{
                 border-radius: 5px;
+                border: 1px solid black;
                 text-align: center;
                 background-color: $itemBlue;
                 width: 100%;
@@ -184,6 +186,7 @@ $tempColor: rgb(4,28,50);
             height: 30%;
             background-color: $itemBlue;
             border-radius: 5%;
+            border: 1px solid black;
             .cover{
                 position: absolute;
                 border-radius: 5%;
