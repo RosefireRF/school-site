@@ -113,6 +113,10 @@
   text-align: center;
 }
 
+#landing-page #about-section .left h1 {
+  font-size: 25px;
+}
+
 #landing-page #about-section .left h1 span {
   color: #064663;
 }
