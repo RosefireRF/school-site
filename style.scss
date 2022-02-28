@@ -383,7 +383,8 @@ nav{
     }
 }
 #holder{
-    background-color: $backgroundBlue;
+    background: rgb(4,28,50);
+    background: linear-gradient(180deg, rgba(4,28,50,1) 0%, rgba(4,28,70,1), rgba(4,28,50,1) 100%);
     width: 100%;
     box-sizing: border-box;
     margin: 0% auto;
@@ -437,7 +438,7 @@ h1,h2,p,tr,th{
 }
 @media only screen and (max-width: 920px){
     #holder{
-        width: 100vw - 10px;
+        width: 100vw;
         #about-section, #picture-section{
             height: 17.5%;
         }
