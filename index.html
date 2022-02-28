@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="style2.css"/>
     <link rel="icon" type="image/x-icon" href="slike/favicon.ico">
     <script src="https://kit.fontawesome.com/a193a5759e.js" crossorigin="anonymous"></script>
     <title>Ilija Krstić</title>
@@ -23,16 +22,16 @@
     <div id="holder">
     <div class="page">
     <div class="flex space-b" id="landing-page">
-        <div class="flex space-b" id="picture-section">
+        <section class="flex space-b" id="picture-section">
             <div id="temp" class="left">
-                    <img src="slike/developer.jpg" class="author-image" alt="">
+                    <img src="slike/developer.jpg" class="author-image" alt=""/>
             </div>
             <div id="quote-holder" class="right">
                 <p class="quote">"Izgleda nemoguće, dokle god se ne završi."</p>
                 <!-- <p>Nelson Mandela</p> -->
             </div>
-        </div>
-        <div class="flex space-b" id="about-section">
+        </section>
+        <section class="flex space-b" id="about-section">
             <div class="left" id="description">
                 <h1 id="ime">Ilija Krstić <span>web programer</span></h1>
                 <p id="skola">Student Visoke ICT Škole</p>
@@ -53,39 +52,39 @@
                       </tr>
                 </table>
             </div>
-        </div>
-        <div class="flex space-b" id="skills-section">
-            <div class="left small" id="skill-description">
+        </section>
+        <section class="flex space-b" id="skills-section">
+            <section class="left small" id="skill-description">
                 <h2>Moje veštine</h2>
                 <p>Ovo su veštine sa kojima sam najpouzdaniji</p>
-            </div>
-            <div class="right flex space-b" id="skills-holder">
-                <div class="skill flex space-a column">
+            </section>
+            <section class="right flex space-b" id="skills-holder">
+                <article class="skill">
                     <h2>HTML</h2>
                     <div class="description">
                     <p>HTML je opisni jezik specijalno namenjen opisu veb stranica. Pomoću njega se jednostavno mogu odvojiti elementi kao što su naslovi, paragrafi, citati i slično</p>
                     </div>
-                </div>
-                <div class="skill flex space-a column">
+                </article>
+                <article class="skill">
                     <h2>CSS</h2>
                     <div class="description">
                     <p>CSS je jezik formatiranja pomoću kog se definiše izgled elemenata veb-stranice, u određenoj formi je postojao još u začecima SGML-a 1970ih godina.  </p>
                     </div>
-                </div>
-                <div class="skill flex space-a column">
+                </article>
+                <article class="skill">
                     <h2>JAVASCRIPT</h2>
                     <div class="description">
                     <p>Javaskript ili Džavaskript je dinamičan, slabo tipiziran i interpretiran programski jezik visokog nivoa.</p>
                     </div>
-                </div>
-                <div class="skill flex space-a column">
+                </article>
+                <article class="skill">
                     <h2>SEO</h2>
                     <div class="description">
                     <p>SEO optimizacija veb-sajta za pretraživače je proces unapređenja kvaliteta i količine saobraćaja od pretraživača ka veb-sajtu preko prirodnih rezultata pretrage.</p>
                     </div>
-                </div>
-            </div>
-        </div>
+                </article>
+            </section>
+        </section>
         <div class="flex space-b" id="education-section">
             <div class="left" id="education-description">
                 <h2>Edukacija</h2>
@@ -105,13 +104,13 @@
         </div>
     </div>
     </div>
-    <div id="projects" class="page flex space-b">
+    <section id="projects" class="page flex space-b">
         <div id="projects-description">
         <h1>Moji projekti</h1>
         <p>Ovu su projekti kojih sam najviše ponosan</p>
         </div>
         <div id="projects-holder">
-            <div class="project">
+            <article class="project">
                 <div class="cover">
                     <h2>Chatroom</h2>
                 </div> 
@@ -124,8 +123,8 @@
                      </div>
                     <div class="project-skills">Veštine upotrebljene: HTML, NodeJS, SocketIO</div>
                 </div>
-            </div>
-            <div class="project">
+            </article>
+            <article class="project">
                 <div class="cover">
                     <h2>Kamen papir makaze</h2>
                 </div> 
@@ -139,8 +138,8 @@
                      </div>
                     <div class="project-skills">Veštine upotrebljene: HTML CSS i JAVASCRIPT</div>
                 </div>
-            </div>
-            <div class="project">
+            </article>
+            <article class="project">
                 <div class="cover">
                     <h2>Više ili manje</h2>
                 </div> 
@@ -154,8 +153,8 @@
                      </div>
                     <div class="project-skills">Veštine upotrebljene: HTML CSS i JAVASCRIPT</div>
                 </div>
-            </div>
-            <div class="project">
+            </article>
+            <article class="project">
                 <div class="cover">
                     <h2>Prezentacije</h2>
                 </div> 
@@ -169,9 +168,9 @@
                      </div>
                     <div class="project-skills">Veštine upotrebljene: HTML CSS i JAVASCRIPT</div>
                 </div>
-            </div>
+            </article>
         </div>
-    </div>
+    </section>
     <div id="contact-us" class="page">
         <h1>Želite da ostanemo u kontaktu?</h1>
         <div id="contact-holder">
@@ -211,15 +210,15 @@
                 <form id="kontakt-forma" action="1.php" method="POST">
                     <div class="input-holder">
                         <label for="ime">Ime i prezime</label>
-                        <input id="ime" name="ime" type="text" placeholder="Marko Marković" class="input">
+                        <input id="ime" name="ime" type="text" placeholder="Marko Marković" class="input"/>
                     </div>
                     <div class="input-holder">
                         <label for="email">Email</label>
-                        <input id="email" name="email" type="email" placeholder="markomarkovic2@gmail.com" class="input">
+                        <input id="email" name="email" type="email" placeholder="markomarkovic2@gmail.com" class="input"/>
                     </div>
                     <div class="input-holder">
                         <label for="tema">Tema</label>
-                        <input id="tema" name="tema" type="text" placeholder="Marko Marković" class="input">
+                        <input id="tema" name="tema" type="text" placeholder="Marko Marković" class="input"/>
                     </div>
                     <div class="textarea-holder">
                         <label for="content">Sadržaj poruke</label>
@@ -235,7 +234,7 @@
                 <a href="https://github.com/RosefireRF/school-site/blob/scss/style.scss"><i class="fa-brands fa-sass"></i></a>
                 <a href="https://github.com/RosefireRF/school-site/blob/scss/style.css"><i class="fa-brands fa-css3-alt"></i></a>
                  <i class="fa-solid fa-sitemap"></i>
-                 <a href="file:///I:/Xampp/htdocs/rad/school-site/robots.txt"><i class="fa-solid fa-robot"></i></a>
+                 <a href="https://rosefirerf.github.io/school-site/robots.txt"><i class="fa-solid fa-robot"></i></a>
             </div>
         </footer>
     </div>
