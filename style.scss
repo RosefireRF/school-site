@@ -681,15 +681,17 @@ h1,h2,h3,p,tr,th{
                 .project{
                     width: 100%;
                     height: 23%;
-                    .project-description{
-                        height: 50%;
-                    }
-                    .project-links{
-                        width: 100%;
-                        height: 8%;
-                    }
-                    .project-skills{
-                        height: 20%;
+                    .project-information{
+                        .project-description{
+                            height: 45%;
+                        }
+                        .project-links{
+                            width: 100%;
+                            height: 10%;
+                        }
+                        .project-skills{
+                            height: 30%;
+                        }
                     }
                 }
             }
@@ -716,7 +718,7 @@ h1,h2,h3,p,tr,th{
         }
         footer{
             #copyright{
-                font-size: 12px;
+                font-size: 10px;
             }
             #links{
                 width: 40%;
