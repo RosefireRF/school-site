@@ -69,7 +69,7 @@ $tempColor: rgb(4,28,50);
             }
         }
         #quote-holder{
-            .quote{
+            #quote{
                 text-align: center;
                 font-style: italic;
                 font-weight: 100;
@@ -247,7 +247,7 @@ $tempColor: rgb(4,28,50);
 }
 #contact-us{
     position: relative;
-    h1{
+    h2{
         text-align: center;
     }
     #contact-holder{
@@ -268,7 +268,7 @@ $tempColor: rgb(4,28,50);
                 text-align: center;
                 height: 32%;
                 color: $offWhite;
-                padding: 5%;
+                padding: 5% 5% 2% 5%;
                 background-color: $itemBlue;
                 .title{
                     height: 20%;
@@ -397,9 +397,8 @@ nav{
         padding-top: 5vh;
     }
 }
-
-h1,h2,p,tr,th{
-    color: white;
+h1,h2,h3,p,tr,th{
+    color: $offWhite;
 }
 @media only screen and (max-width: 1600px){
     h1{
@@ -410,6 +409,9 @@ h1,h2,p,tr,th{
     }
     p,a,tr,th{
         font-size: 12px;
+    }
+    #quote{
+        font-size: 20px;
     }
     #me{
         width: 25%;
@@ -424,16 +426,19 @@ h1,h2,p,tr,th{
             .project{
                 height: 35%;
                 .project-information{
+                    .project-title{
+                        height: 10%;
+                    }
                     .project-description{
                         height: 50%;
                     }
 
                     .project-links{
                         width: 100%;
-                        height: 10%;
+                        height: 15%;
                     }
                     .project-skills{
-                        height: 20%;
+                        height: 25%;
                     }
                 }
             }
@@ -445,6 +450,12 @@ h1,h2,p,tr,th{
         width: 100vw;
         #about-section, #picture-section{
             height: 17.5%;
+            #quote-holder{
+                display: none
+            }
+            #temp{
+                width: 100%
+            }
         }
         #education-section, #skills-section{
             .left{
@@ -468,16 +479,17 @@ h1,h2,p,tr,th{
     #contact-us{
         #contact-holder{
             width: 100%;
+            height: 75%;
         }
     }
     h1{
-        font-size: 30px;
+        font-size: 28px;
     }
     h2{
-        font-size: 25px;
+        font-size: 22px;
     }
     p,a,tr,th{
-        font-size: 15px;
+        font-size: 11px;
     }
     #about-section{
         height: 20%;
@@ -531,8 +543,8 @@ h1,h2,p,tr,th{
             margin-top: 0%;
             height: 100vh;
             .left{
-                height: 6%;
-                margin-bottom: 2%;
+                height: 7%;
+                margin-bottom: 1%;
             }
             .right{
                 height: 92%;
@@ -598,7 +610,7 @@ h1,h2,p,tr,th{
                 margin: 0% auto;
                 margin-top: 5%;
                 width: 95%;
-                height: 50vh;
+                height: 70vh;
                 margin-bottom: 7vh;
             }
         }
