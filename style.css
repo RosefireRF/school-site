@@ -206,6 +206,12 @@
 }
 
 #landing-page #education-section .right {
+  height: 100%;
+}
+
+#landing-page #education-section .right ul {
+  width: 100%;
+  list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -237,6 +243,10 @@
 #landing-page #education-section .right .education a p {
   line-height: 5vh;
   color: #F5F2E7;
+}
+
+#landing-page #education-section .right .education a p:hover {
+  color: #136F63;
 }
 
 @-webkit-keyframes fade-out {
@@ -316,8 +326,8 @@
 #projects #projects-holder .project .cover:hover {
   -webkit-animation-name: fade-out;
           animation-name: fade-out;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -374,6 +384,7 @@
 }
 
 #projects #projects-holder .project .project-information .project-links {
+  list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,14 +402,19 @@
   width: 30%;
 }
 
-#projects #projects-holder .project .project-information .project-links a {
+#projects #projects-holder .project .project-information .project-links li {
   margin: 0% 10%;
   text-decoration: none;
-  color: #136F63;
 }
 
-#projects #projects-holder .project .project-information .project-links .site {
+#projects #projects-holder .project .project-information .project-links li .github {
+  color: #136F63;
+  text-decoration: none !important;
+}
+
+#projects #projects-holder .project .project-information .project-links li .site {
   color: #92A9BD;
+  text-decoration: none !important;
 }
 
 #projects #projects-holder .project .project-information .project-skills {
@@ -606,6 +622,11 @@
   color: #F5F2E7;
 }
 
+#contact-us #contact-holder #contact-form form button:hover {
+  background-color: #ECB365;
+  color: #F5F2E7;
+}
+
 footer {
   position: absolute;
   bottom: 0%;
@@ -622,6 +643,7 @@ footer #copyright {
 }
 
 footer #links {
+  list-style-type: none;
   height: 100%;
   margin: 0% auto;
   width: 20%;
@@ -636,6 +658,14 @@ footer #links {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+footer #links a {
+  color: #92A9BD;
+}
+
+footer #links a:hover {
+  color: #ECB365;
 }
 
 nav {
@@ -670,8 +700,12 @@ nav ul {
 }
 
 nav ul li a {
-  color: white;
+  color: #F5F2E7;
   text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #ECB365;
 }
 
 #holder {
@@ -746,6 +780,10 @@ h1, h2, h3, p, tr, th {
   #holder #about-section #temp, #holder #picture-section #temp {
     width: 100%;
   }
+  #holder #about-section #about-holder, #holder #picture-section #about-holder {
+    margin: 0% auto;
+    width: 70%;
+  }
   #holder #education-section .left, #holder #skills-section .left {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -783,9 +821,20 @@ h1, h2, h3, p, tr, th {
     width: 100%;
     height: 80%;
   }
-  #holder #education-section .right .education, #holder #skills-section .right .education {
-    -ms-grid-column-align: center;
-        justify-self: center;
+  #holder #education-section {
+    height: 25%;
+  }
+  #holder #education-section .left {
+    height: 30%;
+  }
+  #holder #education-section .right {
+    height: 70%;
+  }
+  #holder #education-section .right .education {
+    height: 4vh;
+  }
+  #holder #education-section .right .education a p {
+    line-height: 4vh;
   }
   #contact-us #contact-holder {
     width: 100%;

@@ -146,9 +146,14 @@ $tempColor: rgb(4,28,50);
             text-align: center;
         }
         .right{
-            @include flex-between;
-            flex-direction: column;
             height: 100%;
+            ul{
+                width: 100%;
+                list-style-type: none;
+                @include flex-between;
+                flex-direction: column;
+                height: 100%;
+            }
             .education{
                 border-radius: 5px;
                 border: 1px solid black;
@@ -161,6 +166,9 @@ $tempColor: rgb(4,28,50);
                     p{
                     line-height: 5vh;
                     color: $offWhite;
+                    }
+                    p:hover{
+                        color: $darkGreen;
                     }
                 }
             }
@@ -201,7 +209,7 @@ $tempColor: rgb(4,28,50);
             }
             .cover:hover{
                 animation-name: fade-out;
-                animation-duration: 2s;
+                animation-duration: 0.6s;
                 animation-fill-mode: forwards;
             }
             .project-information{
@@ -222,19 +230,25 @@ $tempColor: rgb(4,28,50);
                     height: 60%;
                 }
                 .project-links{
+                    list-style-type: none;
                     @include flex-center;
                     z-index: 2;
                     height: 10%;
                     margin: 0 auto;
                     width: 30%;
-                    a{
+                    li{
                         margin: 0% 10%;
                         text-decoration: none;
-                        color: $darkGreen;
+                        .github{
+                            color: $darkGreen;
+                            text-decoration: none !important;
+                        }
+                        .site{
+                            color: $lightBlue;
+                            text-decoration: none !important;
+                        }
                     }
-                    .site{
-                        color: $lightBlue;
-                    }
+
                 }
                 .project-skills{
                     @include flex-center;
@@ -343,6 +357,10 @@ $tempColor: rgb(4,28,50);
                     background-color: $darkGreen;
                     color: $offWhite;
                 }
+                button:hover{
+                    background-color: $orange;
+                    color: $offWhite;
+                }
             }
         }
     }
@@ -360,11 +378,18 @@ footer{
         left: 0%;
     }
     #links{
+        list-style-type: none;
         height: 100%;
         margin: 0% auto;
         width: 20%;
         @include flex-between;
         align-items: center;
+        a{
+            color: $lightBlue;
+        }
+        a:hover{
+            color: $orange;
+        }
     }
 }
 nav{
@@ -380,10 +405,16 @@ nav{
         width: 50%;
         list-style-type: none;
         @include flex-around;
-        li a{
-            color: white;
-            text-decoration: none;
+        li{
+            a{
+                color: $offWhite;
+                text-decoration: none;
+            }
+            a:hover{
+                color: $orange;
+            }
         }
+
     }
 }
 #holder{
@@ -456,6 +487,10 @@ h1,h2,h3,p,tr,th{
             #temp{
                 width: 100%
             }
+            #about-holder{
+                margin: 0% auto;
+                width: 70%
+            }
         }
         #education-section, #skills-section{
             .left{
@@ -470,8 +505,22 @@ h1,h2,h3,p,tr,th{
                 align-items: center;
                 width: 100%;
                 height: 80%;
+            }
+        }
+        #education-section{
+            height: 25%;
+            .left{
+                height: 30%;
+            }
+            .right{
+                height: 70%;
                 .education{
-                    justify-self: center;
+                    height: 4vh;
+                    a{
+                        p{
+                            line-height: 4vh;
+                        }
+                    }
                 }
             }
         }
