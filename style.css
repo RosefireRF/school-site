@@ -976,6 +976,9 @@ h1, h2, h3, p, tr, th {
   #pocetak {
     height: 94vh;
   }
+  #pocetak .opis {
+    font-size: 25px;
+  }
   #holder {
     background-color: #041C32;
     padding: 0 0%;

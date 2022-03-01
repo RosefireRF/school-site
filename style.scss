@@ -611,6 +611,9 @@ h1,h2,h3,p,tr,th{
     }
     #pocetak{
         height: 94vh;
+        .opis{
+            font-size: 25px;
+        }
     }
     #holder{
         background-color: $backgroundBlue;
