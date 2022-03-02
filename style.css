@@ -948,9 +948,6 @@ h1, h2, h3, p, tr, th {
   p, a, tr, th {
     font-size: 11px;
   }
-  #about-section {
-    height: 20%;
-  }
   #about-section .right, #about-section #description, #skills-holder, #skill-description {
     width: 100%;
   }
